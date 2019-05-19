@@ -1,6 +1,6 @@
 body{
     margin:0;
-    background-image: url("marvelesOldal/images/bcg.jpg");
+    background-image: url("images/bcg.jpg");
     background-size: cover;
 }
 
@@ -45,7 +45,7 @@ body{
     
 }
 .dc{
-    background-image: url("/images/dcLogo.png");
+    background-image: url("images/dcLogo.png");
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -59,7 +59,7 @@ a:link{
     color:black;
 }
 .marvel{
-    background-image: url("/images/marvelLogo.jpg");
+    background-image: url("images/marvelLogo.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 5px;
