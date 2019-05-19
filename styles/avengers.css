@@ -6,10 +6,6 @@ body {
   overflow: hidden;
 }
 
-.items2 {
-  background-image: url("/images/dcBCG.jpg");
-}
-
 .slider {
   display: -webkit-box;
   display: -ms-flexbox;
