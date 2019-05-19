@@ -1,0 +1,237 @@
+body {
+
+  background-image: url("/images/bcg.png");
+
+  background-size: cover;
+  overflow: hidden;
+}
+
+.items2 {
+  background-image: url("/images/dcBCG.jpg");
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+ /* -webkit-animation-name: slideInRight;
+          animation-name: slideInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;*/
+}
+
+.unactive {
+  /*-webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;*/
+  display: none;
+}
+
+.wrap {
+  width: 80%;
+  height:80vh;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  transition: 1s;
+}
+
+.items {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.items:hover{
+box-shadow: 40px 40px 40px 40px;
+transform: scale(1.1);
+z-index: 999;
+}
+
+.active-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 90vh;
+  display: none;
+  z-index: 2;
+}
+
+.opened {
+  -webkit-animation-name: openingAnimation;
+          animation-name: openingAnimation;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  display: block;
+}
+
+.closed {
+  -webkit-animation-name: closingAnimation;
+          animation-name: closingAnimation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+  clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+  display: none;
+}
+
+.fas {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  cursor: pointer;
+}
+.fas:hover{
+  color: rgb(155, 11, 11);
+}
+
+#left {
+  margin-left: 2%;
+  color:black;
+}
+
+#right {
+  margin-left: 95%;
+}
+
+.slide-bar{
+  position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    /*border: 2px rgb(72, 74, 94) solid;*/
+    width: 21vw;
+    height:1.5vh;
+    margin-top: 5vh;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: rgba(182, 182, 182, 0.274);
+}
+
+.slide-marker{
+  height:1.55vh;
+  width: 7vw;
+  background-color: black;
+  border-radius:10px;
+  margin-left: 0%;
+  position: relative;
+    top: 50%;
+    transform: translate(0%,-50%);
+    transition: 0.5s;
+}
+
+@-webkit-keyframes openingAnimation {
+  0% {
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+    clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes openingAnimation {
+  0% {
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+    clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes closingAnimation {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+    clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+  }
+}
+
+@keyframes closingAnimation {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+    clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate(100%, -50%);
+            transform: translate(100%, -50%);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: translate(-200%, -50%);
+            transform: translate(-200%, -50%);
+    visibility: none;
+  }
+}
+/*# sourceMappingURL=avengers.css.map */
+
+@media(max-width:600px){
+ .wrap{
+   grid-template-columns: auto;
+   grid-template-rows: auto;
+ } 
+}

@@ -1,0 +1,52 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/avengers.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Bosszúállók</title>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slider">
+          <div class="wrap active" id="basic">
+            <div class="items" onclick="ironman()" style="background-image: url('images/kep5.jpg');background-size: cover" ></div>
+            <div class="items" onclick="americancaptain()" style="background-image: url('images/kep4.jpg');background-position: center"></div>
+            <div class="items" onclick="thor()" style="background-image: url('images/kep8.jpg')"></div>
+          </div>
+          <div class="wrap unactive" id="first">
+              <div class="items" onclick="hulk()" style="background-image: url('images/kep12.jpg')"></div>
+              <div class="items" onclick="feketeozvegy()" style="background-image: url('images/kep13.jpg')"></div>
+              <div class="items" onclick="drstrange()" style="background-image: url('images/kep14.jpg')"></div>
+            </div>
+            <div class="wrap unactive" id="second">
+              <div class="items" onclick="blackpanther()" style="background-image: url('images/kep29.jpg')"></div>
+              <div class="items" onclick="marvelcaptain()" style="background-image: url('images/cm.jpg')"></div>
+              <div class="items" onclick="spiderman()" style="background-image: url('images/spiderman.jpg')"></div>
+            </div>
+    </div>
+</div>
+    <div class="active-items"></div>
+
+    <i class="fas fa-arrow-left" id="left" onclick="left()"></i>
+    <i class="fas fa-arrow-right" id="right" onclick="right()"></i>
+
+
+<div class="slide-bar">
+  <div class="slide-marker">
+    
+  </div>
+</div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>  
+    <script src="/javascript/avenger.js"></script>
+   
+</body>
+</html>

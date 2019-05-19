@@ -1,0 +1,160 @@
+@mixin centerPosition{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin verticalCenterPosition{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+@mixin horizontalCenterPosition{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+
+body{
+    background-image: url("/images/marvelLogo.jpg");
+    background-position: center;
+    overflow: hidden;
+}
+.items2{
+    background-image: url("/images/dcBCG.jpg");
+}
+.slider{
+    display: flex;
+    width:100%;
+    height:100%; 
+}
+.active{
+    @include centerPosition();
+    display: grid;
+   
+}
+
+.unactive{
+ 
+    display: none;
+}
+
+.wrap{
+  
+    width: 80%;
+    height: 500px;
+   
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+   //@include centerPosition();
+}
+
+.items{
+   // background-color: $mycolor;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+background-image: url("/images/marvelBCG.png");
+cursor: pointer;
+}
+
+.active-items{
+    @include centerPosition();
+    width: 80vw;
+    height: 90vh;
+    display: none;
+}
+
+
+.opened{
+    animation-name: openingAnimation;
+    animation-duration: 2s;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        display: block;
+}
+
+
+.closed{
+    animation-name: closingAnimation;
+    animation-duration: 2s;
+
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+        display: none;
+}
+
+
+.fas{
+    color:white;
+    font-size: 30px;
+    @include verticalCenterPosition();
+    cursor: pointer;
+}
+#left{
+    margin-left:2%;
+}
+#right{
+   margin-left:95%;
+}
+
+
+
+.slide-bar{
+    @include horizontalCenterPosition();
+    border: 2px rgb(139, 135, 135) solid;
+    width:200px;
+    height: 50px;
+}
+
+
+
+@keyframes openingAnimation{
+    0%{-webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+        clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);}
+    50%{-webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+        clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);}
+    100%{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+@keyframes closingAnimation{
+    0%{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+
+    50%{-webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+        clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);}
+
+    100%{-webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+        clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);}
+
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+      
+      transform: translate(100%, -50%);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate(0, 0);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+@-webkit-keyframes slideOutLeft {
+    from {
+        -webkit-transform: translate(0, 0);
+        transform: translate(-50%, -50%);
+    }
+  
+    to {
+       
+        transform: translate(-200%, -50%);
+        visibility: none;
+    }
+  }

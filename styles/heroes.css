@@ -1,0 +1,109 @@
+#ironman{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80vw;
+    height: 90vh;
+    /*border: 3px solid gray;*/
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: white;
+}
+
+.closeIcon{
+    margin-left:20px;
+    margin-top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closeIcon:hover{
+    color:gray;
+}
+
+.rightSide{
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+
+h3{
+    margin-left: 8vw;
+    margin-top: 5.5vh;
+    padding: 0.5vh;
+    border-bottom: 2px solid black;
+}
+
+.text{
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+p{
+    width: 30vw;
+    text-align: justify;
+    position: relative;
+    left:50%;
+    transform: translate(-50%,0);
+    margin-left: 3vw;
+    margin-top: 5vw;
+   
+}
+
+.closedWindow{
+    -webkit-animation-name: closingWindowAnimation;
+            animation-name: closingWindowAnimation;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+    clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+    display: none;
+  }
+
+  .openedWindow{
+    animation-name: openingAnimation;
+    animation-duration: 1.5s;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        display: block;
+}
+
+  @keyframes closingWindowAnimation {
+    0% {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    50% {
+      -webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+      clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+    }
+    100% {
+      -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+      clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);
+    }
+
+}
+
+@keyframes openingAnimation{
+    0%{-webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
+        clip-path: polygon(100% 50%, 100% 0, 100% 100%, 100% 50%);}
+    50%{-webkit-clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);
+        clip-path: polygon(50% 49%, 100% 0, 100% 100%, 50% 50%);}
+    100%{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(192, 190, 190); 
+    border-radius: 10px;
+}
