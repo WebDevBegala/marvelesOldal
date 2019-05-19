@@ -9,7 +9,7 @@ function ironman(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("marvelesOldal/avengerPages/ironman.html");
+ $(popUp).load("../avengerPages/ironman.html");
 }
 function americancaptain(){
     console.log("click");
@@ -21,43 +21,43 @@ function blackpanther(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/../blackpanther.html");
+ $(popUp).load("../avengerPages/blackpanther.html");
 }
 function drstrange(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/drstrange.html");
+ $(popUp).load("../avengerPages/drstrange.html");
 }
 function feketeozvegy(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/feketeozvegy.html");
+ $(popUp).load("../avengerPages/feketeozvegy.html");
 }
 function hulk(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/hulk.html");
+ $(popUp).load("../avengerPages/hulk.html");
 }
 function marvelcaptain(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/marvelcaptain.html");
+ $(popUp).load("../avengerPages/marvelcaptain.html");
 }
 function spiderman(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/spiderman.html");
+ $(popUp).load("../avengerPages/spiderman.html");
 }
 function thor(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/thor.html");
+ $(popUp).load("../avengerPages/thor.html");
 }
 
 function closing(){
