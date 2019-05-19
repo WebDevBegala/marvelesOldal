@@ -9,7 +9,7 @@ function ironman(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("avengerPages/ironman.html");
+ $(popUp).load("marvelesOldal/avengerPages/ironman.html");
 }
 function americancaptain(){
     console.log("click");
