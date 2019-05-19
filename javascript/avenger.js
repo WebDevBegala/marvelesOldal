@@ -15,13 +15,13 @@ function americancaptain(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/americanCaptain.html");
+ $(popUp).load("../avengerPages/americanCaptain.html");
 }
 function blackpanther(){
     console.log("click");
 popUp.classList.add("opened");
 popUp.classList.replace("closed","opened");
- $(popUp).load("/avengerPages/blackpanther.html");
+ $(popUp).load("/avengerPages/../blackpanther.html");
 }
 function drstrange(){
     console.log("click");
