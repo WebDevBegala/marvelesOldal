@@ -1,13 +1,13 @@
 var imageBox = $(".image-block");
 var i = 0;
-var images = Array("../images/drstrange.jpg",
-                   "/images/hulk.jpg",
-                   "../images/kep10.jpg",
-                   "../images/kep12.jpg",
-                   "../images/kep13.jpg",
-                   "../images/kep14.jpg",
-                   "../images/kep21.jpg",
-                   "../images/kep2.jpg");
+var images = Array("images/drstrange.jpg",
+                   "images/hulk.jpg",
+                   "images/kep10.jpg",
+                   "images/kep12.jpg",
+                   "images/kep13.jpg",
+                   "images/kep14.jpg",
+                   "images/kep21.jpg",
+                   "images/kep2.jpg");
 
 setInterval(function(){
     if(i>=images.length-1){
