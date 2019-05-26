@@ -140,6 +140,39 @@ z-index: 999;
     transition: 0.5s;
 }
 
+.goQuiz{
+  position: absolute;
+  top:3%;
+  left: 80%;
+  background-color: beige;
+  padding:  0.303vw 2.424vw 0.303vw 1.818vw;
+  background-color: rgb(128, 4, 0);
+  color: white;
+}
+
+.goQuizLink{
+  color:white;
+  font-size:1.212vw;
+}
+.goQuizLink:hover{
+color:white;
+text-decoration: none;
+}
+
+.goQuizArrow{
+  color:white;
+  font-size: 1.212vw;
+  margin-left: 80%;
+}
+
+.goQuiz:hover{
+  background-color: green;
+}
+
+.goQuizArrow:hover{
+  color:white;
+}
+
 @-webkit-keyframes openingAnimation {
   0% {
     -webkit-clip-path: polygon(100% 28%, 100% 0, 100% 100%, 100% 63%);
