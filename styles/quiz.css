@@ -163,3 +163,13 @@ cursor: pointer;
     text-decoration:none;
     width: fit-content;
 }
+
+@media(max-height: 400px){
+.image-block{
+        height: inherit;
+    }
+    .quiz-main-block{
+     height: inherit;
+    }
+}
+    
