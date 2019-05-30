@@ -39,7 +39,7 @@ body{
     background-color: white;
 }
 .image-block{
-    background-image: url("images/kep29.jpg");
+    background-image: url("../images/kep29.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 51%, 0% 0%);
