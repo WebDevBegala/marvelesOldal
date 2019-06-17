@@ -1,9 +1,5 @@
 body{ 
-    background-image: linear-gradient(-90deg,rgb(9, 72, 131),rgb(7, 216, 118));
-    background-size: 400% 400%;
-    animation-name: backgroundAnimation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+   
 
 }
 
