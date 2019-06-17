@@ -146,7 +146,6 @@ cursor: pointer;
     position: absolute;
     background-color: white;
     padding: 0.303vw 0vw 0.303vw 0.818vw;
-    background-image: linear-gradient(to right,rgb(89, 89, 243),rgb(66, 247, 66));
     border-radius:5px;
     width:6vw;
 }
